@@ -3,30 +3,25 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Hello Ionic</ion-title>
+    <ion-title>Truque</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
 
-  <h3>Welcome to your first Ionic app!</h3>
+  <h5>Bienvenido! primero que nada, eligue una forma para iniciar sesión:</h5>
+
 
   <p>
-    This starter project is our way of helping you get a functional app running in record time.
+    <button ion-button full outline color="primary"  (click)="doLoginWithFaceBook()" >Iniciar sesión con Facebook</button>
   </p>
   <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
-  <p>
-    <button ion-button large color="primary"  (click)="doLogin()" >Login</button>
+    <button ion-button full outline color="secondary"  (click)="doLogin()" >Iniciar sesión</button>
   </p>
   <p>
 
-    <button ion-button large color="primary"  (click)="doSignup()" >Signup</button>
+    <button ion-button full outline color="dark"  (click)="doSignup()" >Registrarse</button>
   </p>
 
 

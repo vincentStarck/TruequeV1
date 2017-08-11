@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ModalController} from 'ionic-angular';
-import { LoginPage} from '../login/login';
+import { ModalController } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -11,12 +11,15 @@ export class HelloIonicPage {
 
   }
 
-  doLogin(){
+  doLogin() {
     console.log("do login");
-    let modal=this.modalCtrl.create(LoginPage,{data:{userName:"Vincent", password:"Espartanostodalavida"}});
+    let modal = this.modalCtrl.create(LoginPage, { data: { userName: "Vincent", password: "Espartanostodalavida" } });
     modal.present();
   }
-  doSignup(){
-     console.log("do doSignup");
+  doLoginWithFaceBook() {
+
+  }
+  doSignup() {
+    console.log("do doSignup");
   }
 }
