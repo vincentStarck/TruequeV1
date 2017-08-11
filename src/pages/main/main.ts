@@ -4,9 +4,9 @@ import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-hello-ionic',
-  templateUrl: 'hello-ionic.html'
+  templateUrl: 'main.html'
 })
-export class HelloIonicPage {
+export class MainPage {
   constructor(public modalCtrl: ModalController) {
 
   }
