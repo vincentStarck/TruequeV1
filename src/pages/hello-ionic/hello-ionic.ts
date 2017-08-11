@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ModalController} from 'ionic-angular';
-import {ListPage} from '../list/list';
+import { LoginPage} from '../login/login';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -13,7 +13,7 @@ export class HelloIonicPage {
 
   doLogin(){
     console.log("do login");
-    let modal=this.modalCtrl.create(ListPage);
+    let modal=this.modalCtrl.create(LoginPage,{data:{userName:"Vincent", password:"Espartanostodalavida"}});
     modal.present();
   }
   doSignup(){
