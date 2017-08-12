@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+import { LoginPage } from '../../login/login';
 
 @Component({
-  selector: 'page-hello-ionic',
-  templateUrl: 'main.html'
+  selector: 'page-authentication',
+  templateUrl: 'authentication.html'
 })
-export class MainPage {
+export class AuthenticationPage {
   constructor(public modalCtrl: ModalController) {
 
   }
