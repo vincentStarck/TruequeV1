@@ -2,6 +2,7 @@ import { LogginService } from './../services/logging.service';
 import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 import {AuthenticationPage} from '../pages/main/authentication/authentication';
+import {ItemListPage} from '../pages/item-list/item-list';
 import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -45,11 +46,12 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
         this.nativeStorage.getItem('user')
         .then(function (data){
-          env.logginService.logInfo("User was looged previosly");
+          env.logginService.logInfo("User was looged previosly, redirect to ItemListPage");
+          env.rootPage= ItemListPage;
        
         },function (error){
           env.logginService.logInfo('User has not logget , redirect to AuthenticationPage');
-          env.rootPage=AuthenticationPage;
+          env.rootPage= ItemListPage;//AuthenticationPage;
         })
 
       this.statusBar.styleDefault();

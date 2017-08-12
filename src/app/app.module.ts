@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
 import {AuthenticationPage} from '../pages/main/authentication/authentication';
+import {ItemListPage} from '../pages/item-list/item-list';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import { LoginPage} from '../pages/login/login';
@@ -17,6 +17,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     AuthenticationPage,
+    ItemListPage,
     ItemDetailsPage,
     ListPage,
     LoginPage
@@ -29,6 +30,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     AuthenticationPage,
+    ItemListPage,
     ItemDetailsPage,
     ListPage,
     LoginPage
