@@ -1,13 +1,12 @@
 import { LogginService } from './../services/logging.service';
 import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
-import {AuthenticationPage} from '../pages/main/authentication/authentication';
-import {ItemListPage} from '../pages/item-list/item-list';
+import {AuthenticationPage} from '../pages/main/authentication';
+import {ItemListPage} from '../pages/items/item-list/item-list';
 import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeStorage } from '@ionic-native/native-storage';
-
 
 
 @Component({
@@ -33,7 +32,7 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Authentication', component: AuthenticationPage },
+      { title: 'Inicio', component: ItemListPage },
       { title: 'My First List', component: ListPage }
     ];
   }

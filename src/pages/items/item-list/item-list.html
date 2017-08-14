@@ -9,6 +9,10 @@
 
 
 <ion-content padding>
+  <ion-list>
 
-  <h6>items para intercambiar</h6>
+  <page-item *ngFor="let item of items" [itemInput]="item" ></page-item>
+
+
+  </ion-list>
   </ion-content>

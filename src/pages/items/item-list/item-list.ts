@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ItemModel } from './../../models/item';
+import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -12,11 +13,17 @@ import { NavController, NavParams } from 'ionic-angular';
   selector: 'page-item-list',
   templateUrl: 'item-list.html',
 })
-export class ItemListPage {
+export class ItemListPage implements OnInit {
 
+items:ItemModel[]=[];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+ ngOnInit(){
 
+   this.items.push(new ItemModel('nameTest1','descriptionTest1','assets/img/jared.jpg'));
+   this.items.push(new ItemModel('nameTest2','descriptionTest2','assets/img/jared.jpg'));
+   
+ }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemListPage');
   }
