@@ -1,0 +1,18 @@
+
+
+<ion-content padding>
+  <!-- Colors -->
+<ion-fab right edge>
+  <button ion-fab mini color="primary"><ion-icon name="add"></ion-icon></button>
+   <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>   
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+</ion-fab>
+  <ion-list>
+
+  <page-my-item *ngFor="let item of items" [itemInput]="item" ></page-my-item>
+
+
+  </ion-list>
+  </ion-content>

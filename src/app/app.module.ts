@@ -8,6 +8,10 @@ import {AuthenticationPage} from '../pages/main/authentication';
 import {ItemListPage} from '../pages/items/item-list/item-list';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import {ItemDetailPage} from '../pages/items/item-detail/item-detail';
+import {MyItemPageAdmin} from '../pages/my-items/admin-my-item';
+import {MyItemListPage} from '../pages/my-items/my-item-list/my-item-list';
+import {MyItemPage} from  '../pages/my-items/my-item/my-item';
+
 import {ItemPage} from '../pages/items/item';
 import { ListPage } from '../pages/list/list';
 import { LoginPage} from '../pages/login/login';
@@ -19,6 +23,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
+    MyItemPageAdmin,
+    MyItemListPage,
+    MyItemPage,
     AuthenticationPage,
     ItemListPage,
     ItemPage,
@@ -34,7 +41,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    MyItemPageAdmin,
     AuthenticationPage,
+    MyItemListPage,
+    MyItemPage,
     ItemListPage,
     ItemPage,
     ItemDetailsPage,

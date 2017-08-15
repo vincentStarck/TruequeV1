@@ -3,6 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 import {AuthenticationPage} from '../pages/main/authentication';
 import {ItemListPage} from '../pages/items/item-list/item-list';
+import {MyItemPageAdmin} from '../pages/my-items/admin-my-item';
 import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,7 +34,8 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Inicio', component: ItemListPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'My First List', component: ListPage },
+      {title:'Mis objetos',component:MyItemPageAdmin}
     ];
   }
 

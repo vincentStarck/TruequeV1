@@ -20,8 +20,8 @@ items:ItemModel[]=[];
   }
  ngOnInit(){
 
-   this.items.push(new ItemModel('nameTest1','descriptionTest1','assets/img/jared.jpg'));
-   this.items.push(new ItemModel('nameTest2','descriptionTest2','assets/img/jared.jpg'));
+   this.items.push(new ItemModel('nameTest1','descriptionTest1','assets/img/tv.jpg'));
+   this.items.push(new ItemModel('nameTest2','descriptionTest2','assets/img/nike.jpg'));
    
  }
   ionViewDidLoad() {
