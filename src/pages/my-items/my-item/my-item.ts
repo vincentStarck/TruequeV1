@@ -3,6 +3,7 @@ import { ItemModel } from './../../models/item';
 
 import { NavController, NavParams } from 'ionic-angular';
 import { Component, OnInit, Input } from '@angular/core';
+import {MyItemDetailsPage} from '../my-item-details/my-item-details';
 
 @Component({
     selector: 'page-my-item',
@@ -19,9 +20,9 @@ export class MyItemPage implements OnInit {
 
     }
     goDetails(selectedItem: ItemModel) {
-      
-        // this.navCtrl.push(null, {
-        //     selectedItem: selectedItem
-        // });
+
+        this.navCtrl.push(MyItemDetailsPage, {
+            selectedItem: selectedItem
+        });
     }
 }
