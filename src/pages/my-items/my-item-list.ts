@@ -1,8 +1,8 @@
 import { ItemModel } from '../models/item';
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController} from 'ionic-angular';
 import { MyItemsListService } from './my-items-list-service';
-
+import {AddItemPage} from './new-item/add-item';
 @Component({
   selector: 'my-item-list-page',
   templateUrl: 'my-item-list.html'
@@ -10,7 +10,7 @@ import { MyItemsListService } from './my-items-list-service';
 export class MyItemListPage implements OnInit {
 
   items: ItemModel[] = [];
-  constructor(private listService: MyItemsListService, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public modalCtrl: ModalController, public  listService: MyItemsListService, public navCtrl: NavController, public navParams: NavParams) {
   }
   ngOnInit() {
     this.items = this.listService.getItems();
@@ -20,8 +20,11 @@ export class MyItemListPage implements OnInit {
     console.log('ionViewDidLoad ItemListPage');
   }
   addItem(){
-    let newItem = new ItemModel('new item','new Description', 'assets/img/bici.jpg');
-    this.listService.addNewItem(newItem);
+  let modalDetail = this.modalCtrl.create(AddItemPage);
+    modalDetail.present();
+
+    // let newItem = new ItemModel('new item','new Description', 'assets/img/bici.jpg');
+    // this.listService.addNewItem(newItem);
   }
 
 
