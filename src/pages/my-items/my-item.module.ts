@@ -1,14 +1,14 @@
-import {NgModule} from '@angular/core';
-import {MyItemPage} from './my-item/my-item';
-import {MyItemDetailsPage} from './my-item-details/my-item-details';
-import {AddItemPage} from './new-item/add-item';
-import {MyItemListPage} from './my-item-list';
-import {MyItemsListService} from './my-items-list-service';
+import { NgModule } from '@angular/core';
+import { MyItemPage } from './my-item/my-item';
+import { MyItemDetailsPage } from './my-item-details/my-item-details';
+import { AddItemPage } from './new-item/add-item';
+import { MyItemListPage } from './my-item-list';
+import { MyItemsListService } from './my-items-list-service';
 import { IonicModule } from 'ionic-angular';
 
 @NgModule({
   imports: [
-   IonicModule
+    IonicModule
   ],
   declarations: [
     MyItemPage,
@@ -19,7 +19,7 @@ import { IonicModule } from 'ionic-angular';
   providers: [
     MyItemsListService
   ],
-   entryComponents: [
+  entryComponents: [
     MyItemPage,
     MyItemDetailsPage,
     AddItemPage,
