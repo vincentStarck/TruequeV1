@@ -6,6 +6,11 @@
      <h2>{{item.name}}</h2>
     <p>{{item.description}}</p>
 
+<ion-item>
     <button ion-button clear item-end (click)="goDetails(item)" >Detalles</button>
+   <button ion-button clear item-end (click)="deleteItem(index)" >Eliminar</button>
+</ion-item>
+
+
 
  </ion-item>

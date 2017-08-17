@@ -9,15 +9,15 @@ export class MyItemsListService {
 
   }
   getItems() {
-    return this.items.slice();
+    return this.items;// slice();
   }
 
-  addNewItem(item:ItemModel){
+  addNewItem(item: ItemModel) {
     this.items.push(item);
   }
 
-  removeItem(id:number){
-    this.items.splice(id,1);
+  removeItem(id: number) {
+    this.items.splice(id, 1);
   }
 
 }

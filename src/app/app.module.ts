@@ -19,6 +19,8 @@ import {LoginService} from '../services/login.service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { MyItemsListService } from '../pages/my-items/my-items-list-service';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -56,6 +58,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     LoginService,
     LogginService,
+    MyItemsListService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

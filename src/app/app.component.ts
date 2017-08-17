@@ -10,6 +10,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeStorage } from '@ionic-native/native-storage';
 
 
+
 @Component({
   templateUrl: 'app.html',
     providers: [NativeStorage]

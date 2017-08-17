@@ -5,8 +5,7 @@ import { MyItemsListService } from './my-items-list-service';
 
 @Component({
   selector: 'my-item-list-page',
-  templateUrl: 'my-item-list.html',
-  providers: [MyItemsListService]
+  templateUrl: 'my-item-list.html'
 })
 export class MyItemListPage implements OnInit {
 
@@ -20,5 +19,10 @@ export class MyItemListPage implements OnInit {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemListPage');
   }
+  addItem(){
+    let newItem = new ItemModel('new item','new Description', 'assets/img/bici.jpg');
+    this.listService.addNewItem(newItem);
+  }
+
 
 }

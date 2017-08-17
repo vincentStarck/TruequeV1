@@ -4,6 +4,7 @@ import { ItemModel } from './../../models/item';
 import { NavController, NavParams } from 'ionic-angular';
 import { Component, OnInit, Input } from '@angular/core';
 import {MyItemDetailsPage} from '../my-item-details/my-item-details';
+import {MyItemsListService} from '../my-items-list-service';
 
 @Component({
     selector: 'page-my-item',
@@ -12,8 +13,9 @@ import {MyItemDetailsPage} from '../my-item-details/my-item-details';
 export class MyItemPage implements OnInit {
 
     @Input('itemInput') item: ItemModel
+    @Input('index') index:number;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, public logginService: LogginService) {
+    constructor(public listService:MyItemsListService, public navCtrl: NavController, public navParams: NavParams, public logginService: LogginService) {
 
     }
     ngOnInit() {
@@ -24,5 +26,10 @@ export class MyItemPage implements OnInit {
         this.navCtrl.push(MyItemDetailsPage, {
             selectedItem: selectedItem
         });
+    }
+
+    deleteItem(index:number){
+      console.info(index);
+     this.listService.removeItem(index);
     }
 }
