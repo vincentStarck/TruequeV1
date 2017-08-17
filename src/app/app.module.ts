@@ -8,28 +8,19 @@ import {AuthenticationPage} from '../pages/main/authentication';
 import {ItemListPage} from '../pages/items/item-list/item-list';
 import {ItemDetailsPage } from '../pages/item-details/item-details';
 import {ItemDetailPage} from '../pages/items/item-detail/item-detail';
-import {MyItemPage} from  '../pages/my-items/my-item/my-item';
-import {MyItemDetailsPage} from '../pages/my-items/my-item-details/my-item-details';
-import {MyItemListPage} from '../pages/my-items/my-item-list';
-import {AddItemPage} from  '../pages/my-items/new-item/add-item';
 import {ItemPage} from '../pages/items/item';
 import {ListPage } from '../pages/list/list';
 import {LoginPage} from '../pages/login/login';
 import {LoginService} from '../services/login.service';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {MyItemsModule} from '../pages/my-items/my-item.module';
 
-import { MyItemsListService } from '../pages/my-items/my-items-list-service';
 
 @NgModule({
   declarations: [
     MyApp,
-    MyItemPage,
     AuthenticationPage,
-    MyItemDetailsPage,
-    AddItemPage,
-    MyItemListPage,
     ItemListPage,
     ItemPage,
     ItemDetailsPage,
@@ -39,16 +30,13 @@ import { MyItemsListService } from '../pages/my-items/my-items-list-service';
   ],
   imports: [
     BrowserModule,
+    MyItemsModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     AuthenticationPage,
-    MyItemDetailsPage,
-    AddItemPage,
-    MyItemListPage,
-    MyItemPage,
     ItemListPage,
     ItemPage,
     ItemDetailsPage,
@@ -61,7 +49,6 @@ import { MyItemsListService } from '../pages/my-items/my-items-list-service';
     SplashScreen,
     LoginService,
     LogginService,
-    MyItemsListService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
