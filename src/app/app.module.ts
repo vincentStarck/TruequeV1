@@ -15,6 +15,7 @@ import { LoginService } from '../services/login.service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyItemsModule } from '../pages/my-items/my-item.module';
+import {Camera} from '@ionic-native/camera'
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { MyItemsModule } from '../pages/my-items/my-item.module';
     SplashScreen,
     LoginService,
     LogginService,
+    Camera,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

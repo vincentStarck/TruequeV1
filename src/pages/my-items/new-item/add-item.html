@@ -13,5 +13,17 @@
 </ion-header>
 
 <ion-content>
- Agregar formulario
+  <form  #form="ngForm" (ngSubmit)="addNewItem()" novalidate>
+      <ion-item>
+        <ion-label color="primary" floating>Nombre</ion-label>
+        <ion-input type="text" required [(ngModel)]="item.name" name="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Description</ion-label>
+        <ion-textarea [(ngModel)]="item.description"  required name="description"></ion-textarea>
+      </ion-item>
+      <button ion-button type="submit" [disabled]="!form.valid" block><ion-icon name="camera"></ion-icon></button>
+    </form>
+
+
 </ion-content>
