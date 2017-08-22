@@ -1,3 +1,4 @@
+import { UploadImgPage } from './upload-img/upload-img';
 import { NgModule } from '@angular/core';
 import { MyItemPage } from './my-item/my-item';
 import { MyItemDetailsPage } from './my-item-details/my-item-details';
@@ -5,6 +6,7 @@ import { AddItemPage } from './new-item/add-item';
 import { MyItemListPage } from './my-item-list';
 import { MyItemsListService } from './my-items-list-service';
 import { IonicModule } from 'ionic-angular';
+
 
 @NgModule({
   imports: [
@@ -14,7 +16,8 @@ import { IonicModule } from 'ionic-angular';
     MyItemPage,
     MyItemDetailsPage,
     AddItemPage,
-    MyItemListPage
+    MyItemListPage,
+    UploadImgPage
   ],
   providers: [
     MyItemsListService
@@ -23,7 +26,8 @@ import { IonicModule } from 'ionic-angular';
     MyItemPage,
     MyItemDetailsPage,
     AddItemPage,
-    MyItemListPage
+    MyItemListPage,
+    UploadImgPage
   ]
 
 })

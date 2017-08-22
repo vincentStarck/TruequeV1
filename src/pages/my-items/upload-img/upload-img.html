@@ -1,0 +1,13 @@
+<ion-item>
+    <ion-list>
+        <ion-item *ngFor="let foto of fotos">
+            <img width="70" height="70" src='{{foto}}'>
+        </ion-item>
+    </ion-list>
+
+
+
+    <!--<ion-img  width="70" height="70"  src="{{urlImg}}"></ion-img>-->
+    <ion-img width="70" height="70" src="assets/img/picture.png" (click)="addImgFromCamera()"></ion-img>
+    <ion-img width="70" height="70" src="assets/img/album.png" (click)="addImgFromAlbum()"></ion-img>
+</ion-item>

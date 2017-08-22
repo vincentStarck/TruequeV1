@@ -1,7 +1,7 @@
 import { LogginService } from './../../../services/logging.service';
 import { ItemModel } from './../../models/item';
 
-import { NavController, NavParams, ModalController } from 'ionic-angular';
+import { NavController, NavParams, ModalController} from 'ionic-angular';
 import { Component, OnInit, Input } from '@angular/core';
 import { MyItemDetailsPage } from '../my-item-details/my-item-details';
 import { MyItemsListService } from '../my-items-list-service';

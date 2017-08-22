@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Description
+      Agregar artículo
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -22,7 +22,11 @@
         <ion-label color="primary" floating>Description</ion-label>
         <ion-textarea [(ngModel)]="item.description"  required name="description"></ion-textarea>
       </ion-item>
-      <button ion-button type="submit" [disabled]="!form.valid" block><ion-icon name="camera"></ion-icon></button>
+    
+      <page-upload-img></page-upload-img>
+    
+     
+      <!--<button ion-button type="submit" [disabled]="!form.valid" block><ion-icon name="camera"></ion-icon></button>-->
     </form>
 
 

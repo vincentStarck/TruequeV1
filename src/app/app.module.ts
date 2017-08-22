@@ -1,4 +1,5 @@
 
+
 import { LogginService } from './../services/logging.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -15,7 +16,9 @@ import { LoginService } from '../services/login.service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyItemsModule } from '../pages/my-items/my-item.module';
-import {Camera} from '@ionic-native/camera'
+import {Camera} from '@ionic-native/camera';
+
+
 
 
 @NgModule({
