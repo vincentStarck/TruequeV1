@@ -17,6 +17,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyItemsModule } from '../pages/my-items/my-item.module';
 import {Camera} from '@ionic-native/camera';
+import {File, FileEntry} from "@ionic-native/file";
 
 
 
@@ -54,6 +55,7 @@ import {Camera} from '@ionic-native/camera';
     LoginService,
     LogginService,
     Camera,
+    File,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

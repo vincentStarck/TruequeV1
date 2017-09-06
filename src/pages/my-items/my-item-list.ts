@@ -17,6 +17,7 @@ export class MyItemListPage implements OnInit {
     this.listService.itemsChanged.subscribe(
       (items: ItemModel[]) => {
         this.items = items;
+        console.info("LISTA: ",items);
       }
     )
 

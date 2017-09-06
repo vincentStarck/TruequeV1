@@ -3,7 +3,8 @@ import {EventEmitter} from '@angular/core';
 export class MyItemsListService {
 
   itemsChanged = new EventEmitter<ItemModel[]>();
-
+  imgAdded = new EventEmitter<string>();
+  private fileUri :string;
   private items: ItemModel[] = [
     new ItemModel('nike', 'Nike', 'assets/img/nike.jpg'),
     new ItemModel('bicicleta', 'bici de montaña', 'assets/img/bici.jpg')
@@ -13,6 +14,11 @@ export class MyItemsListService {
   }
   getItems() {
     return this.items.slice();
+  }
+  addImg(fileUri:string){
+    this.fileUri =fileUri;
+    this.imgAdded.emit(this.fileUri.slice());
+
   }
 
   addNewItem(item: ItemModel) {
