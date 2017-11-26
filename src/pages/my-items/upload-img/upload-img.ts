@@ -20,6 +20,11 @@ export class UploadImgPage {
 
   }
 
+  deletePhoto(){
+    this.newItem.imgFileLocation="";
+    
+  }
+
   addImgFromCamera() {
 
     const options: CameraOptions = {
@@ -34,16 +39,11 @@ export class UploadImgPage {
 
       console.info(imageData);
       this.fotos.push(imageData);
-      this.newItem.imgFileLocation=imageData;
-    
-
+      this.newItem.imgFileLocation=imageData; 
       //this.camera.cleanup();
     }, (err) => {
       console.error(err);
-    });
-    // this.item.imgUrl="assets/img/nike.jpg";
-    // this.listService.addNewItem(this.item)
-    //this.dismiss();
+    }); 
 
   }
 
@@ -58,24 +58,14 @@ export class UploadImgPage {
     }
 
     this.camera.getPicture(options).then((imageData) => {
-      //  let base64Image = 'data:image/jpeg;base64,' + imageData;
-      //  console.info(imageData);
-
-      //this.getFileEntry(imageData);
-      console.info(imageData);
-      //   this.fotos.push(this.sanitizer.bypassSecurityTrustUrl(imageData));
-
+    
+      console.info(imageData);     
       this.fotos.push(imageData);
       this.newItem.imgFileLocation=imageData;
 
     }, (err) => {
       console.error(err);
     });
-    // this.item.imgUrl="assets/img/nike.jpg";
-    // this.listService.addNewItem(this.item)
-    //this.dismiss();
-
-
   }
 
   getFileEntry(imgUri: any) {

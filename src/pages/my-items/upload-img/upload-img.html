@@ -11,8 +11,8 @@
             <ion-thumbnail item-height="90" item-width="90" item-start>
                 <img [src]="foto">
             </ion-thumbnail>
-            <button ion-button clear item-end>View</button>
-            <button ion-button clear item-end>Delete</button>
+            <!-- <button ion-button clear item-end>View</button> -->
+            <button ion-button  (click)="deletePhoto()" >Delete</button>
 
         </ion-item>
     </ion-list>
