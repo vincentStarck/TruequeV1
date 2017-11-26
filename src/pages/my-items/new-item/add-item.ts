@@ -2,7 +2,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { NavController, ViewController, NavParams } from 'ionic-angular';
-import { ItemModel } from '../../models/item';
+import { ItemModel } from '../model/ItemModel';
 import { MyItemsListService } from '../my-items-list-service';
 
 
@@ -15,7 +15,7 @@ import { MyItemsListService } from '../my-items-list-service';
 export class AddItemPage implements OnInit {
   private item: ItemModel;
   constructor(public listService: MyItemsListService, public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
-    this.item = new ItemModel('', '', '');
+    this.item = new ItemModel('', '', []);
 
 
   }
@@ -23,14 +23,10 @@ export class AddItemPage implements OnInit {
     }
 
 
-  dismiss() {
-    //this.viewCtrl.dismiss();
-  }
   addNewItem() {
 
    this.listService.addNewItem(this.item);
-    this.dismiss();
-
+   this.navCtrl.pop();
   }
 
 }

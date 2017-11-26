@@ -6,13 +6,13 @@
     <ion-list>
 
 
-        <ion-item *ngFor="let foto of fotos">
+        <ion-item *ngFor="let imgPath of newItem.imgFileLocation ;let i = index">
 
             <ion-thumbnail item-height="90" item-width="90" item-start>
-                <img [src]="foto">
+                <img [src]="imgPath">
             </ion-thumbnail>
             <!-- <button ion-button clear item-end>View</button> -->
-            <button ion-button  (click)="deletePhoto()" >Delete</button>
+            <button ion-button  clear item-end  (click)="deletePhoto(i)" >Delete</button>
 
         </ion-item>
     </ion-list>

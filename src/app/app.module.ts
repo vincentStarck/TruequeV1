@@ -8,8 +8,8 @@ import { MyApp } from './app.component';
 import { AuthenticationPage } from '../pages/main/authentication';
 import { ItemListPage } from '../pages/items/item-list/item-list';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ItemDetailPage } from '../pages/items/item-detail/item-detail';
-import { ItemPage } from '../pages/items/item';
+import { ItemDetailPage} from "../pages/shared/detail/item-detail";
+import { ItemPage } from '../pages/shared/item/item';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { LoginService } from '../services/login.service';
@@ -17,7 +17,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyItemsModule } from '../pages/my-items/my-item.module';
 import {Camera} from '@ionic-native/camera';
-import {File, FileEntry} from "@ionic-native/file";
+import {File} from "@ionic-native/file";
 
 
 

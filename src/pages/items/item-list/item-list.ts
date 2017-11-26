@@ -1,4 +1,4 @@
-import { ItemModel } from './../../models/item';
+import { ItemModel } from './../../shared/model/ItemModel';
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -20,8 +20,8 @@ items:ItemModel[]=[];
   }
  ngOnInit(){
 
-   this.items.push(new ItemModel('nameTest1','descriptionTest1','assets/img/tv.jpg'));
-   this.items.push(new ItemModel('nameTest2','descriptionTest2','assets/img/nike.jpg'));
+   this.items.push(new ItemModel('nameTest1','descriptionTest1',['assets/img/tv.jpg']));
+   this.items.push(new ItemModel('nameTest2','descriptionTest2',['assets/img/nike.jpg','assets/img/tv.jpg']));
    
  }
   ionViewDidLoad() {

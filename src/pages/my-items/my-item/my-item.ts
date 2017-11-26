@@ -7,7 +7,7 @@ import { MyItemDetailsPage } from '../my-item-details/my-item-details';
 import { MyItemsListService } from '../my-items-list-service';
 
 @Component({
-  selector: 'page-my-item',
+  selector: 'my-items-page',
   templateUrl: 'my-item.html'
 })
 export class MyItemPage implements OnInit {

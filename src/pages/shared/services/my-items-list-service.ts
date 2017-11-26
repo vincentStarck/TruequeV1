@@ -1,6 +1,6 @@
-import { ItemModel } from  "./model/ItemModel";
+import { ItemModel } from  "../model/ItemModel"
 import {EventEmitter} from '@angular/core';
-export class MyItemsListService {
+export class ItemService {
 
   itemsChanged = new EventEmitter<ItemModel[]>();
  

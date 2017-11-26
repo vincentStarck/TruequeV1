@@ -1,4 +1,4 @@
-import { ItemModel } from '../models/item';
+import { ItemModel } from "./model/ItemModel";
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { MyItemsListService } from './my-items-list-service';
@@ -26,12 +26,10 @@ export class MyItemListPage implements OnInit {
     console.log('ionViewDidLoad ItemListPage');
   }
   addItem() {
-    let modalDetail = this.modalCtrl.create(AddItemPage);
-    modalDetail.present();
+  
+    this.navCtrl.push(AddItemPage);
 
-    //  let newItem = new ItemModel('new item','new Description', 'assets/img/bici.jpg');
-    //  this.listService.addNewItem(newItem);
-  }
+   }
 
 
 }
