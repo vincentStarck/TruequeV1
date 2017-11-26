@@ -23,7 +23,7 @@
         <ion-textarea [(ngModel)]="item.description"  required name="description"></ion-textarea>
       </ion-item>
     
-      <page-upload-img></page-upload-img>
+      <page-upload-img [newItem]="item" ></page-upload-img>
     
      
       <button ion-button type="submit" [disabled]="!form.valid" block>Agregar</button>

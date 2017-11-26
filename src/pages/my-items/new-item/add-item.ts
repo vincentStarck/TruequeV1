@@ -14,6 +14,8 @@ import { MyItemsListService } from '../my-items-list-service';
 
 export class AddItemPage implements OnInit {
 
+
+
   private item: ItemModel;
   constructor(public listService: MyItemsListService, public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
     this.item = new ItemModel('', '', '');
@@ -21,22 +23,15 @@ export class AddItemPage implements OnInit {
 
   }
   ngOnInit() {
-    console.info("EEEEEEEEEEEEEEEEEEEE")
-  
-
-    this.listService.imgAdded.subscribe(
-      (fileUrl: string) => {
-        this.item.imgFileLocation = fileUrl;
-        console.info("img url: "+this.item.imgFileLocation)
-      }
-    )
-  }
+    }
 
 
   dismiss() {
     this.viewCtrl.dismiss();
   }
   addNewItem() {
+
+  console.info("NEW ITEM TO ADD:")
    console.info(this.item)
     this.listService.addNewItem(this.item);
     this.dismiss();

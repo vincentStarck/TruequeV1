@@ -1,5 +1,5 @@
 import { MyItemsListService } from './../my-items-list-service';
-import { Component,Input } from '@angular/core';
+import { Component,Input} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -13,7 +13,7 @@ import { ItemModel } from './../../models/item';
 })
 export class UploadImgPage {
 
-
+ @Input() newItem:ItemModel;
   private fotos: any[] = [];
 
   constructor(private listService: MyItemsListService, private file: File, private sanitizer: DomSanitizer, private camera: Camera, public navCtrl: NavController, public navParams: NavParams) {
@@ -34,7 +34,8 @@ export class UploadImgPage {
 
       console.info(imageData);
       this.fotos.push(imageData);
-      this.listService.addImg(imageData);
+      this.newItem.imgFileLocation=imageData;
+    
 
       //this.camera.cleanup();
     }, (err) => {
@@ -65,7 +66,7 @@ export class UploadImgPage {
       //   this.fotos.push(this.sanitizer.bypassSecurityTrustUrl(imageData));
 
       this.fotos.push(imageData);
-      this.listService.addImg(imageData);
+      this.newItem.imgFileLocation=imageData;
 
     }, (err) => {
       console.error(err);
